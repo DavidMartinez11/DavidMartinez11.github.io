@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autos</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
-	
-	<!-- Enlace al CSS de Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Enlace al CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-	<!-- Enlace al CSS personalizado -->
-	<link rel="stylesheet" type="text/css" href="Style.css">
-	
+    <!-- Enlace al CSS personalizado -->
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    
     <style>
         .carImageContainer {
             max-width: 100%; /* Ajusta el ancho máximo al tamaño del contenedor */
             overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
             position: relative; /* Establece posición relativa para que las imágenes adicionales sean posicionadas correctamente */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            display: table; /* Permite que los márgenes automáticos funcionen correctamente */
         }
 
         .carImageContainer img {
@@ -39,44 +41,51 @@
             max-width: 100%; /* Ajusta el ancho máximo de las imágenes al tamaño del contenedor */
             height: auto; /* Mantiene la proporción de aspecto original de las imágenes */
         }
+        
+        /* Estilos para el logo */
+        .navbar-brand img {
+          height: 50px; /* Ajusta esta altura según sea necesario */
+          width: auto; /* Mantiene la proporción */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="box" id="box1">Rent-A Car</div>
-        <div class="split-container">
-            <div class="box" id="box2">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-				  <a class="navbar-brand" href="#">Menú</a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				  </button>
-				  <div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav flex-column">
-					  <li class="nav-item">
-						<a class="nav-link" href="index.html">Página Principal</a>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link" href="autos.html">Autos</a>
-					  </li>
-					  <li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  Servicios
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="mantenimiento.html">Mantenimiento</a>
-						  <a class="dropdown-item" href="montallantas.html">Montallantas</a>
-						  <a class="dropdown-item" href="alineacion.html">Alineación</a>
-						  <a class="dropdown-item" href="balanceo.html">Balanceo</a>
-						</div>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link" href="contacto.html">Contacto</a>
-					  </li>
-					</ul>
-				  </div>
-				</nav>
-            </div>
+        <div class="box" id="box1">
+            <h1 class="text-center">Rent-A Car</h1>
+        </div>
+        <div class="box" id="box2">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img src="logo.jpg" alt="Rent-A Car Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Página Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="autos.html">Autos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Servicios
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="mantenimiento.html">Mantenimiento</a>
+                              <a class="dropdown-item" href="montallantas.html">Montallantas</a>
+                              <a class="dropdown-item" href="alineacion.html">Alineación</a>
+                              <a class="dropdown-item" href="balanceo.html">Balanceo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
             <div class="box" id="box3">
                 <div id="carContent" style="text-align: center;">
                     <div>Elige tu Auto Ideal</div>
@@ -113,7 +122,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script>
         // Función para mostrar las imágenes adicionales cuando el mouse está sobre la imagen principal
